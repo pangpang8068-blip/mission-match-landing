@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07152f" />
+  <meta name="description" content="Complete all Mission Match 3D levels to become eligible to claim Free Credit. Play the original game within our Game Zone." />
+  <title>Mission Match 3D | Finish All Levels, Unlock Free Credit</title>
+  <style>
+    :root{--ink:#f4f9ff;--muted:#adbed7;--cyan:#54e7ff;--blue:#4087ff;--navy:#07152f}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#07152f;color:var(--ink)}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+    .site{min-height:100svh;overflow:hidden;position:relative;background:radial-gradient(ellipse at 83% 13%,#174783 0%,transparent 37%),radial-gradient(ellipse at 8% 88%,#19386d 0%,transparent 38%),linear-gradient(150deg,#071225,#081a38 67%,#071128)}.site:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(#80b0ff15 1px,transparent 1px),linear-gradient(90deg,#80b0ff15 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,transparent,#000)}
+    .wrap{position:relative;width:min(1120px,calc(100% - 36px));margin:auto}header{height:82px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.065em;font-size:17px}.brand-symbol{height:39px;width:39px;display:grid;place-items:center;border:1px solid #6bdafc72;border-radius:13px;background:#2a76ff30;font-size:23px;box-shadow:0 0 25px #269dff24}.top-tag{font-size:12px;color:#bbd8f8;letter-spacing:.13em;border:1px solid #75baff40;border-radius:999px;padding:10px 14px}
+    main{min-height:calc(100svh - 150px);display:grid;grid-template-columns:1fr .88fr;align-items:center;gap:52px;padding:35px 0 75px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#9eeeff;font-size:13px;letter-spacing:.15em;font-weight:800;margin-bottom:16px}.dot{width:8px;height:8px;border-radius:100%;background:#65e6ff;box-shadow:0 0 13px #36ecff}h1{font-size:clamp(43px,6.7vw,82px);letter-spacing:-.055em;line-height:1.04;margin:0 0 19px}h1 span{display:block;background:linear-gradient(100deg,#fff 10%,#63deff 56%,#6194ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:490px;line-height:1.75;color:var(--muted);font-size:17px;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.primary{border:0;border-radius:15px;padding:16px 30px;color:#07152f;background:linear-gradient(115deg,#6af3ff,#5eaeff);font-weight:900;box-shadow:0 13px 35px #168eff48;transition:transform .2s}.primary:hover{transform:translateY(-2px)}.secondary{border:1px solid #88b4ee61;border-radius:15px;background:#ffffff0b;color:#e5f5ff;padding:15px 19px;font-weight:700}.micro{color:#8fa9cb;font-size:12px;margin-top:20px}.micro strong{color:#bde5ff}
+    .game-card{position:relative;border:1px solid #8deaff52;border-radius:29px;padding:17px;background:linear-gradient(160deg,#1b417b99,#101c3bda);box-shadow:0 24px 75px #0008,0 0 65px #338cff1d;transform:rotate(2deg)}.game-stage{min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;border-radius:19px;background:radial-gradient(circle at 50% 45%,#376fd1b0,#10264a 57%,#0b1734);overflow:hidden;position:relative}.game-stage:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;border:1px solid #ffffff25;box-shadow:0 0 0 45px #ffffff07,0 0 0 90px #ffffff04}.fruit-row{position:relative;font-size:clamp(56px,7vw,85px);filter:drop-shadow(0 12px 7px #0005);letter-spacing:-12px;transform:rotate(-8deg)}.game-name{position:relative;text-align:center;font-size:30px;font-weight:950;line-height:1.15;text-shadow:0 4px 20px #0008}.game-name small{display:block;color:#8beafd;font-size:16px;letter-spacing:.2em;margin-bottom:7px}.pill{position:absolute;top:18px;left:18px;background:#d1f8ff;color:#0c3160;padding:8px 12px;border-radius:100px;font-weight:900;font-size:11px;letter-spacing:.08em}.card-bottom{display:flex;justify-content:space-between;align-items:center;padding:13px 4px 2px;color:#b7d4f0;font-size:12px}.play-indicator{display:inline-flex;align-items:center;gap:6px;color:#89edff;font-weight:800}.footer{position:relative;border-top:1px solid #d8edff1b;text-align:center;padding:19px 0;color:#7f9abd;font-size:12px}
+    .overlay{position:fixed;inset:0;z-index:9999;display:none;flex-direction:column;background:#071225}.overlay.active{display:flex}.bar{z-index:1;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:58px;padding:calc(8px + env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 9px max(12px,env(safe-area-inset-left));background:#071225;border-bottom:1px solid #63c2ff37}.bar-title{font-weight:800;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.back{background:#193a68;border:1px solid #679de87e;border-radius:10px;color:#f4fbff;padding:10px 13px;font-weight:800;white-space:nowrap}.iframe-shell{flex:1;position:relative;min-height:0}.game-frame{display:block;width:100%;height:100%;border:0;background:#fff}.help{position:absolute;right:10px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:min(270px,75vw);border-radius:12px;padding:10px 12px;background:#091e41ec;color:#dbebff;border:1px solid #79bfff6b;font-size:12px;line-height:1.5;box-shadow:0 8px 24px #0006}.help a{text-decoration:underline;color:#85e8ff}.help-dismiss{float:right;border:0;background:transparent;color:white;font-size:16px;margin:-4px -3px 0 9px}.hidden{display:none!important}body.playing{overflow:hidden}
+    /* Reward-focused additions. Original embed and game controls are preserved. */
+    .reward-ribbon{display:inline-flex;align-items:center;gap:9px;padding:10px 15px;margin-bottom:18px;border-radius:999px;border:1px solid #ffd46c75;background:linear-gradient(100deg,#4e390d99,#4d360e55);color:#ffda7d;font-size:12px;font-weight:900;letter-spacing:.08em}
+    .reward-highlight{color:#ffd56e!important;background:none!important;-webkit-text-fill-color:#ffd56e!important}
+    .reward-note{display:flex;align-items:flex-start;gap:10px;color:#d4e3f7;background:#ffffff0c;border:1px solid #ffffff25;border-radius:14px;padding:13px 15px;max-width:530px;font-size:13px;line-height:1.6;margin:0 0 20px}
+    .reward-note b{color:#ffe29b}.reward-step-section{position:relative;padding:24px 0 85px}.section-heading{text-align:center;font-size:clamp(27px,4vw,40px);margin:0 0 11px;letter-spacing:-.035em}.section-sub{text-align:center;color:#acc2df;margin:0 auto 30px;line-height:1.65;max-width:620px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{background:linear-gradient(160deg,#17335bca,#0c1d3bdc);border:1px solid #74b7fc44;border-radius:19px;padding:25px 20px;min-height:165px}.step-id{font-size:12px;letter-spacing:.17em;color:#ffd679;font-weight:900}.step h3{font-size:20px;margin:14px 0 8px}.step p{font-size:13px;line-height:1.65;color:#afc2dd;margin:0}.rules{margin:21px auto 0;padding:17px 22px;background:#082447aa;border:1px solid #5b9de04d;border-radius:16px;color:#c6d7ee;line-height:1.7;font-size:13px}.rules strong{color:#ffdb87}.bottom-cta{display:flex;justify-content:center;margin-top:27px}.final-note{max-width:850px;margin:18px auto 0;font-size:12px;line-height:1.7;text-align:center;color:#96acc8}.gold{background:linear-gradient(110deg,#ffeb9d,#ffbd4d);color:#1c263c;box-shadow:0 12px 28px #ecab3140}.pill{background:#ffe5a4!important;color:#533c07!important}
+    @media(max-width:760px){.steps{grid-template-columns:1fr}.step{min-height:0;padding:19px}.reward-step-section{padding-bottom:55px}.reward-note{text-align:left;margin-inline:auto}.reward-ribbon{font-size:11px}}
+    @media(max-width:760px){header{height:70px}.brand{font-size:15px}.top-tag{font-size:10px;padding:9px}main{grid-template-columns:1fr;gap:36px;text-align:center;padding:39px 0 60px}.eyebrow{justify-content:center}.lead{font-size:15px;margin-inline:auto}.actions{justify-content:center}.game-card{max-width:480px;width:100%;margin:auto;transform:none}.game-stage{min-height:310px}.micro{font-size:11px}h1{font-size:clamp(42px,11vw,66px)}.bar{min-height:56px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="site" id="home">
+    <div class="wrap">
+      <header><a href="#home" class="brand"><span class="brand-symbol">🎮</span><span>GAME ZONE</span></a><span class="top-tag">MINI GAME EXPERIENCE</span></header>
+      <main>
+        <section>
+          <div class="eyebrow"><span class="dot"></span> COMPLETE THE CHALLENGE</div>
+          <div class="reward-ribbon">🎁 FREE CREDIT REWARD</div>
+          <h1>FINISH THE GAME.<span class="reward-highlight">UNLOCK FREE CREDIT.</span></h1>
+          <p class="lead">Play <strong>Mission Match 3D</strong>, complete <strong>every level</strong>, and become eligible to claim your Free Credit reward.</p>
+          <div class="reward-note"><span aria-hidden="true">🔒</span><span><b>Important:</b> Free Credit is only available after completing <b>the entire game</b>. Starting the game or completing only some levels does not qualify.</span></div>
+          <div class="actions"><button class="primary" id="playButton" type="button">▶ &nbsp; PLAY &amp; COMPLETE ALL LEVELS</button><a class="secondary" href="https://project-portal-bridge.lovable.app/" target="_blank" rel="noopener noreferrer">OPEN GAME DIRECTLY ↗</a></div>
+          <p class="micro">✓ Mobile-friendly &nbsp; ✓ Original game untouched &nbsp; ✓ <strong>Return to homepage anytime</strong></p>
+        </section>
+        <section class="game-card" aria-label="Mission Match 3D featured game">
+          <div class="game-stage"><span class="pill">FINISH ALL LEVELS TO QUALIFY</span><div class="fruit-row" aria-hidden="true">🍓 🍊 🍇</div><div class="game-name"><small>MISSION</small>MATCH 3D</div></div>
+          <div class="card-bottom"><span>COMPLETE TO UNLOCK ELIGIBILITY</span><span class="play-indicator">● READY TO PLAY</span></div>
+        </section>
+      </main>
+    </div>
+    <section class="reward-step-section wrap" id="rewards" aria-labelledby="steps-heading">
+      <h2 class="section-heading" id="steps-heading">HOW TO UNLOCK YOUR REWARD</h2>
+      <p class="section-sub">One simple challenge: finish the whole game before requesting your Free Credit.</p>
+      <div class="steps">
+        <article class="step"><div class="step-id">STEP 01</div><h3>🎮 Start Playing</h3><p>Tap PLAY NOW and enjoy the original Mission Match 3D without leaving this page.</p></article>
+        <article class="step"><div class="step-id">STEP 02</div><h3>🏁 Finish Every Level</h3><p>Keep playing until you complete the final level. Partial progress does not qualify.</p></article>
+        <article class="step"><div class="step-id">STEP 03</div><h3>🎁 Follow the Claim Steps</h3><p>After finishing, use the game's existing reward claim flow. Eligibility and completion may be verified.</p></article>
+      </div>
+      <div class="rules"><strong>FREE CREDIT CONDITIONS:</strong> Complete the entire game first. Credit is not granted simply for visiting this page or tapping PLAY. Reward amount, availability, eligibility, verification, and any claim restrictions are governed by the rules shown in the original game. This Landing Page does not itself issue or approve credits.</div>
+      <div class="bottom-cta"><button class="primary gold launch-game" type="button">▶ &nbsp; START THE FULL CHALLENGE</button></div>
+      <p class="final-note">The game is hosted on Lovable and remains unchanged. If it cannot be embedded in your browser, use the direct-game link provided inside the player.</p>
+    </section>
+    <footer class="footer">© <span id="year"></span> Game Zone · Powered by your existing Lovable game</footer>
+  </div>
+  <section class="overlay" id="gameOverlay" aria-label="Mission Match 3D game" aria-hidden="true">
+    <div class="bar"><button type="button" id="backButton" class="back">← BACK TO HOME</button><span class="bar-title">🎮 MISSION MATCH 3D</span></div>
+    <div class="iframe-shell"><iframe id="gameFrame" class="game-frame" title="Mission Match 3D" allow="fullscreen; autoplay; clipboard-read; clipboard-write" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div id="iframeHelp" class="help"><button type="button" class="help-dismiss" id="dismissHelp" aria-label="Dismiss tip">×</button>If the game appears blank, Lovable may block embedding. <a href="https://project-portal-bridge.lovable.app/" target="_blank" rel="noopener noreferrer">Open the original game ↗</a></div>
+    </div>
+  </section>
+  <script>
+    const GAME_URL = 'https://project-portal-bridge.lovable.app/';
+    const overlay = document.getElementById('gameOverlay');
+    const frame = document.getElementById('gameFrame');
+    const playButton = document.getElementById('playButton');
+    const backButton = document.getElementById('backButton');
+    const help = document.getElementById('iframeHelp');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('dismissHelp').addEventListener('click',()=>help.classList.add('hidden'));
+    function enterGame(){overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');document.body.classList.add('playing');help.classList.remove('hidden');frame.src=GAME_URL;backButton.focus();}
+    function exitGame(){overlay.classList.remove('active');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('playing');frame.src='about:blank';playButton.focus();}
+    playButton.addEventListener('click',enterGame);
+    document.querySelectorAll('.launch-game').forEach(button=>button.addEventListener('click',enterGame));
+    backButton.addEventListener('click',exitGame);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('active'))exitGame();});
+    // Optional integration: if the Lovable game is later configured to send
+    // window.parent.postMessage({type:'MISSION_MATCH_COMPLETED'}, '*'),
+    // this parent page can return home automatically after completion.
+    window.addEventListener('message',event=>{
+      if(event.origin!==new URL(GAME_URL).origin)return;
+      if(event.data && typeof event.data==='object' && event.data.type==='MISSION_MATCH_COMPLETED')exitGame();
+    });
+  </script>
+</body>
+</html>
